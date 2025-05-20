@@ -1,0 +1,16 @@
+# Ignore everything
+/*
+
+# Allow these files and folders
+!.gitignore
+!README.md
+!db.sql
+!freeze.py
+!pyproject.toml
+!uv.lock
+!src/
+!src/**
+!static_files/
+!static_files/**
+!.vscode/
+!.vscode/**
