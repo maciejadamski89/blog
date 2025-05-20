@@ -1,0 +1,19 @@
+// Custom variable overrides
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+// Import Bootstrap CSS
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
+
+// Override Bootstrap CSS variables with higher specificity
+#navbar {
+    --bs-navbar-color: cyan;
+    --bs-navbar-bg: blue;
+    background-color: var(--bs-navbar-bg);
+}
