@@ -1,0 +1,33 @@
+{
+    "editor.wordBasedSuggestions": "off",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "[python]": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always",
+            "source.organizeImports": "never",
+            "source.organizeImports.ruff": "always"
+        }
+    },
+    "flake8.enabled": false,
+    "ruff.enable": true,
+    "ruff.nativeServer": "on",
+    "ruff.lint.enable": true,
+    "ruff.importStrategy": "fromEnvironment",
+    "ruff.codeAction.disableRuleComment": {
+        "enable": true
+    },
+    "ruff.codeAction.fixViolation": {
+        "enable": true
+    },
+    "python.testing.pytestArgs": ["tests"],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "testing.showCoverageInExplorer": true,
+    "testing.coverageToolbarEnabled": true
+}
