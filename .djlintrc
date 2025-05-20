@@ -1,0 +1,9 @@
+{
+    "profile": "jinja",
+    "indent": 4,
+    "max_line_length": 120,
+    "format_js": true,
+    "format_css": true,
+    "extend_exclude": ".venv,build",
+    "ignore": "H006"
+}

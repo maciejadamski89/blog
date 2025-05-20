@@ -1,0 +1,77 @@
+[project]
+name = "dataglitch-website"
+version = "1.0.6"
+description = "A website for dataglitch"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.0",
+    "frozen-flask>=1.0.1",
+    "flask-compress>=1.17",
+    "flask-assets>=2.1.0",
+    "libsass>=0.23.0",
+    "bandit>=1.8.3",
+    "bump-my-version>=1.0.2",
+    "ruff>=0.9.7",
+    "djlint>=1.34.1",
+    "markdown>=3.8",
+    "flask-sqlalchemy>=3.1.1",
+]
+
+[tool.bandit]
+exclude_dirs = ["__pycache__", "static_files", ".venv"]
+
+[tool.bumpversion]
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)"
+serialize = ["{major}.{minor}.{patch}"]
+search = "{current_version}"
+replace = "{new_version}"
+regex = false
+ignore_missing_version = false
+tag = false
+sign_tags = false
+tag_name = "v{new_version}"
+tag_message = "Bump version: {current_version} → {new_version}"
+allow_dirty = false
+commit = false
+message = "Bump version: {current_version} → {new_version}"
+commit_args = ""
+
+[tool.ruff]
+exclude = [
+    ".git",
+    ".notes",
+    ".pytest_cache",
+    ".venv",
+    ".vscode",
+    "__pycache__",
+    "docs",
+    "tests",
+]
+include = ["*.py", "*.pyi", "*.ipynb", "**/pyproject.toml"]
+indent-width = 4
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# https://docs.astral.sh/ruff/rules/
+select = ["A", "ANN", "ASYNC", "C", "D", "E", "ERA", "F", "I", "Q", "RET", "W"]
+ignore = ["D104", "D203", "D211", "D213", "ERA001"]
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.flake8-annotations]
+allow-star-arg-any = true
+
+[tool.ruff.lint.isort]
+case-sensitive = false
+detect-same-package = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.uv]
+link-mode = "copy"
