@@ -1,10 +1,9 @@
 """Main entry point for the Flask application."""
 
-import json
 import os
 
 from flask import Flask, render_template
-from flask_assets import Bundle, Environment
+from flask_assets import Environment
 from flask_compress import Compress
 from flask_frozen import Freezer
 
